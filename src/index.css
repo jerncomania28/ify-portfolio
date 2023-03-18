@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+font-family: 'Figtree'; src: url('../fonts/Figtree-VariableFont_wght.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+
+@font-face {
+font-family: 'Source sans pro'; src: url('../fonts/SourceSansPro-Regular.ttf') format('truetype'); font-weight: normal; font-style: normal; }
