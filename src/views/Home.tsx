@@ -4,6 +4,7 @@ import Paragraph from "../components/Paragraph";
 import Footer from "../components/Footer";
 import SubHeader from "../components/SubHeader";
 import ProjectDescription from "../components/ProjectDescription";
+import LazyImage from "../components/LazyImage";
 
 import Envelope from "../assets/envelope.svg";
 import ArrowDown from "../assets/ArrowDown.svg";
@@ -36,7 +37,7 @@ const Home = () => {
             <Button icon={ArrowDown}>View My CV</Button>
           </div>
         </div>
-        <img src={CraiglistHome} alt="craiglist-home" />
+        <img src={CraiglistHome} alt="craiglist-home" loading="lazy" />
       </div>
 
       {/* hero --end */}
@@ -53,12 +54,16 @@ const Home = () => {
               patients with easy and convenient access to medical professionals.
             </ProjectDescription>
             <div className="w-full relative justify-start md:w-1/2">
-              <img src={Mobiklinic} alt="mobiklinic" className="-mt-[200px]" />
+              <LazyImage src={Mobiklinic} alt="moboklinic" />
             </div>
           </div>
           <div className="w-[90%] relative mx-auto flex flex-col justify-between my-[50px] py-6 md:flex-row md:w-4/5">
             <div className="w-full relative justify-start md:w-1/2">
-              <img src={MatCare} alt="mobiklinic" className="md:-mt-[100px]" />
+              <LazyImage
+                src={MatCare}
+                alt="matcare"
+                className="md:-mt-[100px]"
+              />
             </div>
             <ProjectDescription header="Matcare" href="#">
               An app that helps users connect with mums & caregivers before and
@@ -71,7 +76,7 @@ const Home = () => {
             An upgrade of the user interface of the craigslist website
           </ProjectDescription>
           <div className="w-full relative justify-center md:w-1/2">
-            <img src={Craiglist} alt="mobiklinic" />
+            <LazyImage src={Craiglist} alt="craiglist" />
           </div>
         </div>
       </div>
@@ -87,7 +92,7 @@ const Home = () => {
 
         <div className="w-full flex flex-col justify-between mx-auto my-[50px] py-4 md:flex-row">
           <div className="w-full flex relative justify-center md:w-1/2">
-            <img src={Profile} alt="profile-header" />
+            <LazyImage src={Profile} alt="profile" />
           </div>
           <div className="flex flex-col justify-center w-full relative md:w-1/2 md:ml-8">
             <Header
