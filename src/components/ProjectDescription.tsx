@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import ArrowRight from "../assets/ArrowRight.svg";
 
@@ -21,12 +22,12 @@ const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
       <p className="text-[16px] font-source-pro text-paragraph my-2">
         {children}
       </p>
-      <a href={href} className="my-3 inline-flex">
+      <Link to={href} className="my-3 inline-flex">
         <span className="text-[14px] text-header font-source-pro">
           View Project
         </span>
         <img src={ArrowRight} alt="arrow-right" className="mx-2" />
-      </a>
+      </Link>
     </div>
   );
 };
