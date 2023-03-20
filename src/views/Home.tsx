@@ -49,7 +49,7 @@ const Home = () => {
         </div>
         <div className="w-full relative bg-offwhite pt-16 pb-4">
           <div className="w-[90%] relative mx-auto flex flex-col-reverse justify-between md:flex-row md:w-4/5">
-            <ProjectDescription header="Moboklinic" href="#">
+            <ProjectDescription header="Moboklinic" href="/mobiklinic">
               The app aims to revolutionize the healthcare industry by providing
               patients with easy and convenient access to medical professionals.
             </ProjectDescription>
@@ -85,7 +85,7 @@ const Home = () => {
 
       {/* about me */}
 
-      <div className="flex flex-col w-[90%] mx-auto relative">
+      <div className="flex flex-col w-[90%] mx-auto relative md:w-4/5">
         <div className="pt-[50px] pb-[50px] relative w-full md:w-4/5">
           <SubHeader>ABOUT ME</SubHeader>
         </div>

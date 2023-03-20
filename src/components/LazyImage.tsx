@@ -41,6 +41,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
       src={imageSrc || undefined}
       alt={alt}
       className={className}
+      loading="lazy"
     />
   );
 };

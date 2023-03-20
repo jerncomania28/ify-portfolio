@@ -8,6 +8,7 @@ module.exports = {
         paragraph: "#333333",
         offwhite: "#F7F7F7",
         footer: "#1A1A1A",
+        purple: "#6326E5",
       },
       fontFamily: {
         figtree: ["Figtree"],
