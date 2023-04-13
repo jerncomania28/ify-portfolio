@@ -9,3 +9,6 @@ font-family: 'Figtree'; src: url('../fonts/Figtree-VariableFont_wght.ttf') forma
 
 @font-face {
 font-family: 'Source sans pro'; src: url('../fonts/SourceSansPro-Regular.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+
+@font-face {
+font-family: 'fraunces'; src: url('../fonts/Fraunces_9pt-Light.ttf') format('truetype'); font-weight: normal; font-style: normal; }

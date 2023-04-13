@@ -4,43 +4,36 @@ import Button from "./Button";
 
 import Envelope from "../assets/envelope.svg";
 import LinkedinLogo from "../assets/LinkedinLogo.svg";
-import ArrowUp from "../assets/ArrowUp.svg";
 
 const Footer = () => {
   return (
-    <footer className="w-full relative pt-16 pb-4 px-3 bg-footer md:pb-8">
-      <div className="w-[95%] mx-auto relative flex flex-col justify-between items-center md:w-4/5 md:flex-row ">
-        <div className=" w-full md:w-1/2 text-left">
-          <Header
-            firstText="Let's work"
-            secondText="together"
-            className="text-white font-bold"
-            white
-          />
-          <Paragraph className="text-white my-4 text-left">
-            Ready to stand out from the crowd? Let's work together to create a
-            design that's as unique as you are.
-          </Paragraph>
-          <div className="flex my-4">
-            <Button
-              icon={Envelope}
-              border
-              className="border-white text-white ml-0"
-            >
-              Email me
-            </Button>
-            <Button icon={LinkedinLogo} className="border-white text-white">
-              LinkedIn
-            </Button>
-          </div>
+    <footer className="w-full h-[100vh] bg-footer flex items-center justify-center ">
+      <div className="w-[90%] relative mx-auto flex flex-col items-center md:w-4/5">
+        <Header
+          firstText="Let's work"
+          secondText="together."
+          className="font-bold mx-auto text-[80px] w-full leading-[70px] md:leading-[88px] text-white justify-self-start"
+        />
+        <Paragraph className="font-figtree text-footer-text w-full justify-self-start text-[20px] my-4 md:my-auto">
+          Ready to stand out from the crowd? Let's work together to <br />{" "}
+          create a design that's as unique as you are.
+        </Paragraph>
+        <div className="inline-flex my-8 self-center md:self-start">
+          <Button
+            icon={Envelope}
+            border
+            className="hover:bg-white hover:text-black border-white text-white py-3 w-[150px]"
+          >
+            Email
+          </Button>
+          <Button
+            icon={LinkedinLogo}
+            border
+            className="mx-3 hover:bg-white hover:text-black border-white text-white py-3 w-[150px]"
+          >
+            LinkedIn
+          </Button>
         </div>
-        <a href={"#"} className="flex justify-end w-full py-4">
-          <img
-            src={ArrowUp}
-            alt="arrow-up"
-            className="border-[1px] border-white p-3 rounded-full my-4"
-          />
-        </a>
       </div>
     </footer>
   );

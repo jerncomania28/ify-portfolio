@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
     <a
       href={href}
       role="button"
-      className={`outline-none inline-flex rounded-full py-3 px-4 mx-3 whitespace-nowrap ${
+      className={`outline-none flex justify-center items-center rounded-full py-3 px-4 whitespace-nowrap ${
         border ? "border-[1px] border-solid" : ""
       } ${className}`}
     >

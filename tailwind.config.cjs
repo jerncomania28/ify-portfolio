@@ -9,10 +9,12 @@ module.exports = {
         offwhite: "#F7F7F7",
         footer: "#1A1A1A",
         purple: "#6326E5",
+        "footer-text": "#D7D7D7",
       },
       fontFamily: {
         figtree: ["Figtree"],
-        'source-pro': ['Source sans pro'],
+        "source-pro": ["Source sans pro"],
+        fraunces: ["Fraunces"],
       },
     },
   },
