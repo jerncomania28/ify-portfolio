@@ -2,23 +2,26 @@ import Header from "../components/Header";
 import Button from "../components/Button";
 import Paragraph from "../components/Paragraph";
 import Footer from "../components/Footer";
-import SubHeader from "../components/SubHeader";
-import ProjectDescription from "../components/ProjectDescription";
 import LazyImage from "../components/LazyImage";
+import Card from "../components/Card";
 
 import Envelope from "../assets/envelope.svg";
 import ViewCV from "../assets/view-cv.svg";
-import CraiglistHome from "../assets/craiglist-home.svg";
 import Mobiklinic from "../assets/mobiklinic.svg";
 import MatCare from "../assets/matcare.svg";
 import Craiglist from "../assets/craiglist.svg";
 import Profile from "../assets/profile.svg";
+import Coverly from "../assets/coverly.svg";
+import TvMovieApp from "../assets/tv_movie_app.svg";
+import LeadershipBoard from "../assets/leadership-board.svg";
+import OnboardingView from "../assets/onboarding-view.svg";
+import FinanceMgtApp from "../assets/finance-mgt-app.svg";
 
 const Home = () => {
   return (
     <div className="w-full relative">
       {/* hero */}
-      <div className="w-full relative bg-offwhite">
+      <div className="w-full relative h-[100vh] bg-offwhite">
         <div className="w-[90%] pb-[70px] relative mx-auto flex flex-col w-full md:w-4/5 ">
           <Header
             firstText="Designing"
@@ -51,6 +54,57 @@ const Home = () => {
       </div>
 
       {/* hero --end */}
+
+      {/* projects */}
+
+      <div className="relative w-full bg-white">
+        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 md:w-4/5">
+          <Header firstText="Projects." className="text-[80px] font-bold" />
+
+          <div className="w-full mx-auto my-[50px] py-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] ">
+            <Card
+              href="/mobiklinic"
+              category="Mobile App"
+              projectName="Mobiklinic"
+              projectImage={Mobiklinic}
+              projectDescriptionSlug="Case Study - 2022"
+            >
+              The app aims to revolutionize the healthcare industry by providing
+              patients with easy and convenient access to medical professionals.
+            </Card>
+            <Card
+              href="/matcare"
+              category="Mobile App"
+              projectName="Matcare"
+              projectImage={MatCare}
+              projectDescriptionSlug="Case Study - 2022"
+            >
+              An app that helps users connect with mums & caregivers before and
+              after delivery
+            </Card>
+            <Card
+              href="/craiglist"
+              category="Website"
+              projectName="Craiglist"
+              projectImage={Craiglist}
+              projectDescriptionSlug="UI Redesign - 2022"
+            >
+              An upgrade of the user interface of the craigslist website to make
+              it more modern and user friendly.
+            </Card>
+            <Card
+              href="/coverly"
+              category="Mobile App"
+              projectName="Coverly"
+              projectImage={Coverly}
+              projectDescriptionSlug="coming soon"
+            >
+              The app aims to revolutionize the healthcare industry by providing
+              patients with easy and convenient access to medical professionals.
+            </Card>
+          </div>
+        </div>
+      </div>
 
       {/* about me */}
       <div className="relative w-full bg-white">
@@ -86,46 +140,52 @@ const Home = () => {
         </div>
       </div>
 
-      {/* projects */}
-      <div className="flex flex-col w-full relative">
-        <div className="pt-[50px] pb-[150px] relative w-[90%] mx-auto md:w-4/5">
-          <SubHeader>MY PROJECTS</SubHeader>
-        </div>
-        <div className="w-full relative bg-offwhite pt-16 pb-4">
-          <div className="w-[90%] relative mx-auto flex flex-col-reverse justify-between md:flex-row md:w-4/5">
-            <ProjectDescription header="Moboklinic" href="/mobiklinic">
-              The app aims to revolutionize the healthcare industry by providing
-              patients with easy and convenient access to medical professionals.
-            </ProjectDescription>
-            <div className="w-full relative justify-start md:w-1/2">
-              <LazyImage src={Mobiklinic} alt="moboklinic" />
-            </div>
-          </div>
-          <div className="w-[90%] relative mx-auto flex flex-col justify-between my-[50px] py-6 md:flex-row md:w-4/5">
-            <div className="w-full relative justify-start md:w-1/2">
-              <LazyImage
-                src={MatCare}
-                alt="matcare"
-                className="md:-mt-[100px]"
-              />
-            </div>
-            <ProjectDescription header="Matcare" href="#">
-              An app that helps users connect with mums & caregivers before and
-              after delivery
-            </ProjectDescription>
-          </div>
-        </div>
-        <div className="w-[90%] relative mx-auto flex flex-col justify-between py-12 md:flex-row md:w-4/5">
-          <ProjectDescription header="Craiglist" href="#">
-            An upgrade of the user interface of the craigslist website
-          </ProjectDescription>
-          <div className="w-full relative justify-center md:w-1/2">
-            <LazyImage src={Craiglist} alt="craiglist" />
+      {/* shots */}
+
+      <div className="relative w-full bg-white">
+        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 md:w-4/5">
+          <Header firstText="shots." className="text-[80px] font-bold" />
+
+          <div className="w-full mx-auto my-[50px] py-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
+            <Card
+              category="Mobile App"
+              projectName="Finance Mgt. App"
+              projectImage={FinanceMgtApp}
+              projectDescriptionSlug="UI Design"
+            >
+              This app helps users take control of their finances by enabling
+              them set budgets goals and track their expenses.
+            </Card>
+            <Card
+              category="Mobile App"
+              projectName="Onboarding Flow"
+              projectImage={OnboardingView}
+              projectDescriptionSlug="UI Design"
+            >
+              An onboarding flow for an app that helps techies attract
+              recruiters and secure remote jobs.
+            </Card>
+            <Card
+              category="Smart Tv App"
+              projectName="TV Movie App"
+              projectImage={TvMovieApp}
+              projectDescriptionSlug="UI Design"
+            >
+              A smart TV movie app designed to give users a pleasant streaming
+              experience.
+            </Card>
+            <Card
+              category="Mobile App"
+              projectName="Leaderboard"
+              projectImage={LeadershipBoard}
+              projectDescriptionSlug="UI Design"
+            >
+              A leaderboard showing gamers rankings and where the user stands
+              against the rest.
+            </Card>
           </div>
         </div>
       </div>
-
-      {/* projects --end */}
 
       <Footer />
     </div>

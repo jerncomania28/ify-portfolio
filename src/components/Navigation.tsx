@@ -1,16 +1,61 @@
-import { Outlet } from "react-router-dom";
+import { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
+import { motion } from "framer-motion";
+
+import NavLink from "./NavLink";
 
 import Logo from "../assets/logo.svg";
-import Hamburger from "../assets/hamburger.svg";
 import ArrowUp from "../assets/ArrowUp.svg";
 
+const NAV_ROUTES = ["Home", "About me", "Projects", "Email Me", "View My CV"];
+
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleSetIsOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  console.log("isOpen ", isOpen);
   return (
     <>
       <div className="w-full relative bg-offwhite">
         <div className="w-4/5 flex justify-between items-center mx-auto py-4">
-          <img src={Logo} alt="logo" />
-          <img src={Hamburger} alt="hamburger" />
+          <Link to="/">
+            <img src={Logo} alt="logo" />
+          </Link>
+          <div
+            className="w-6 h-6 relative text-center transition-all duration-500 ease-in-out z-20"
+            onClick={handleSetIsOpen}
+          >
+            {/* menu Btn */}
+            <span
+              className={`w-full h-[3px] transparent rounded absolute top-[50%] left-0 transition-all duration-500 ease-in-out before:content-[''] before:h-[3px] before:bg-black before:rounded before:absolute before:-top-[5px] before:w-full before:left-0 before:transition-all before:duration-500 before:ease-in-out after:content-[''] after:h-[3px] after:bg-black after:rounded after:absolute after:top-[5px] after:w-[60%] after:left-0 after:transition-all after:duration-500 after:ease-in-out cursor-pointer ${
+                isOpen &&
+                "before:transform before:translate-y-[5px] before:rotate-45 before:bg-card after:-translate-y-[5px] after:-rotate-45 after:w-full after:bg-card"
+              }`}
+            ></span>
+          </div>
+
+          {isOpen && (
+            <motion.div
+              initial={{ y: -200, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              exit={{ y: -200, opacity: 0 }}
+              className={`w-full h-[100vh] fixed top-0 left-0 bg-black z-10 flex items-center justify-center flex-col`}
+            >
+              {NAV_ROUTES.map((route, _idx) => (
+                <NavLink
+                  key={_idx}
+                  index={_idx}
+                  handleSetIsOpen={handleSetIsOpen}
+                >
+                  {route}
+                </NavLink>
+              ))}
+            </motion.div>
+          )}
         </div>
         <Outlet />
       </div>

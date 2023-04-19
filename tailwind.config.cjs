@@ -10,6 +10,8 @@ module.exports = {
         footer: "#1A1A1A",
         purple: "#6326E5",
         "footer-text": "#D7D7D7",
+        card: "#ECECEC",
+        "card-header-color": "#757575",
       },
       fontFamily: {
         figtree: ["Figtree"],

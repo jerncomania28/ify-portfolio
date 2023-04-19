@@ -5,6 +5,7 @@ import Navigation from "./components/Navigation";
 import Home from "./views/Home";
 import Moboklinic from "./views/Moboklinic";
 import Error from "./views/Error";
+
 const App = () => {
   return (
     <>
