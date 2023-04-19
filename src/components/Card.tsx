@@ -41,7 +41,7 @@ const Card: React.FC<CardProps> = ({
         <p className="uppercase font-[600px] text-[14px] text-card-header-color">
           {category}
         </p>
-        <p className="font-[400px] text-[16px] text-paragraph my-2">
+        <p className="font-[400px] text-[16px] text-paragraph my-3">
           {children}
         </p>
         {href && (

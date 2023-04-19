@@ -16,39 +16,45 @@ import TvMovieApp from "../assets/tv_movie_app.svg";
 import LeadershipBoard from "../assets/leadership-board.svg";
 import OnboardingView from "../assets/onboarding-view.svg";
 import FinanceMgtApp from "../assets/finance-mgt-app.svg";
+import HeroImage from "../assets/hero-img.svg";
 
 const Home = () => {
   return (
     <div className="w-full relative">
       {/* hero */}
-      <div className="w-full relative h-[100vh] bg-offwhite">
-        <div className="w-[90%] pb-[70px] relative mx-auto flex flex-col w-full md:w-4/5 ">
-          <Header
-            firstText="Designing"
-            secondText="Striking Visuals."
-            className="font-bold w-[90%] mx-auto md:text-[120px] md:leading-[132px] md:w-full"
-          />
-          <Paragraph className="font-extralight w-[90%] mx-auto md:w-auto">
-            I’m Ifeanyi, a{" "}
-            <span className="italic font-bold"> UI/UX designer</span> and like a
-            sculptor, I chip away at the rough edges of your design until the
-            final product is a masterpiece that stands out from the crowd.
-          </Paragraph>
-          <div className="inline-flex my-8 self-center md:self-start">
-            <Button
-              icon={ViewCV}
-              border
-              className="border-black hover:bg-black hover:text-white "
-            >
-              View My CV
-            </Button>
-            <Button
-              icon={Envelope}
-              border
-              className="mx-3 border-black hover:bg-black hover:text-white "
-            >
-              Contact Me
-            </Button>
+      <div className="w-full relative h-[100vh] bg-header flex items-center justify-center">
+        <div className="w-[90%] relative mx-auto flex flex-col justify-center items-center md:flex-row">
+          <div className="w-full relative flex flex-col md:w-1/2 ">
+            <Header
+              firstText="Designing"
+              secondText="Striking Visuals."
+              className="font-bold w-full mx-auto text-white md:text-[70px] md:leading-[80px] md:w-full"
+            />
+            <Paragraph className="font-extralight w-full mx-auto text-white md:w-auto">
+              I’m Ifeanyi, a{" "}
+              <span className="italic font-bold"> UI/UX designer</span> and like
+              a sculptor, I chip away at the rough edges of your design until
+              the final product is a masterpiece that stands out from the crowd.
+            </Paragraph>
+            <div className="inline-flex my-4 self-center md:self-start md:my-8">
+              <Button icon={ViewCV} border className="border-white text-white ">
+                View My CV
+              </Button>
+              <Button
+                icon={Envelope}
+                border
+                className="mx-3 border-white text-white "
+              >
+                Contact Me
+              </Button>
+            </div>
+          </div>
+          <div className="w-full relative md:w-1/2">
+            <img
+              src={HeroImage}
+              alt="hero-img"
+              className="w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -58,7 +64,7 @@ const Home = () => {
       {/* projects */}
 
       <div className="relative w-full bg-white">
-        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 md:w-4/5">
+        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 ">
           <Header firstText="Projects." className="text-[80px] font-bold" />
 
           <div className="w-full mx-auto my-[50px] py-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] ">
@@ -108,11 +114,12 @@ const Home = () => {
 
       {/* about me */}
       <div className="relative w-full bg-white">
-        <div className="flex flex-col w-[90%] mx-auto relative pt-[100px] pb-8 md:w-4/5">
+        <div className="flex flex-col w-[90%] mx-auto relative pt-[100px] pb-8 ">
           <Header firstText="About." className="text-[80px] font-bold" />
           <div className="w-full flex flex-col justify-between mx-auto my-[50px] py-4 md:flex-row">
             <div className="w-full flex relative justify-center md:w-1/2">
-              <LazyImage src={Profile} alt="profile" />
+              <img src={Profile} alt="profile" />
+              {/* <LazyImage src={Profile} alt="profile" /> */}
             </div>
             <div className="flex flex-col justify-center w-full relative my-4 md:my-auto md:w-1/2 md:ml-8">
               <h1 className="text-[32px] font-bold font-fraunces">
@@ -143,7 +150,7 @@ const Home = () => {
       {/* shots */}
 
       <div className="relative w-full bg-white">
-        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 md:w-4/5">
+        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 ">
           <Header firstText="shots." className="text-[80px] font-bold" />
 
           <div className="w-full mx-auto my-[50px] py-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">

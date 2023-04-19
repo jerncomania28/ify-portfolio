@@ -8,7 +8,7 @@ import LinkedinLogo from "../assets/LinkedinLogo.svg";
 const Footer = () => {
   return (
     <footer className="w-full h-[100vh] bg-footer flex items-center justify-center ">
-      <div className="w-[90%] relative mx-auto flex flex-col items-center md:w-4/5">
+      <div className="w-[90%] relative mx-auto flex flex-col items-center ">
         <Header
           firstText="Let's work"
           secondText="together."
