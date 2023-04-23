@@ -1,7 +1,6 @@
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Paragraph from "../components/Paragraph";
-import Footer from "../components/Footer";
 import LazyImage from "../components/LazyImage";
 import Card from "../components/Card";
 
@@ -23,12 +22,12 @@ const Home = () => {
     <div className="w-full relative">
       {/* hero */}
       <div className="w-full relative h-[100vh] bg-header flex items-center justify-center">
-        <div className="w-[90%] relative mx-auto flex flex-col justify-center items-center md:flex-row">
+        <div className="w-[90%] relative mx-auto flex flex-col justify-center items-center md:flex-row max-w-[1500px]">
           <div className="w-full relative flex flex-col md:w-1/2 ">
             <Header
               firstText="Designing"
               secondText="Striking Visuals."
-              className="font-bold w-full mx-auto text-white md:text-[70px] md:leading-[80px] md:w-full"
+              className="font-bold w-full mx-auto text-white text-[40px] md:text-[70px] md:leading-[80px] md:w-full"
             />
             <Paragraph className="font-extralight w-full mx-auto text-white md:w-auto">
               I’m Ifeanyi, a{" "}
@@ -49,7 +48,7 @@ const Home = () => {
               </Button>
             </div>
           </div>
-          <div className="w-full relative md:w-1/2">
+          <div className="w-full relative hidden md:w-1/2 md:flex">
             <img
               src={HeroImage}
               alt="hero-img"
@@ -64,12 +63,12 @@ const Home = () => {
       {/* projects */}
 
       <div className="relative w-full bg-white">
-        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 ">
+        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 max-w-[1500px] ">
           <Header firstText="Projects." className="text-[80px] font-bold" />
 
-          <div className="w-full mx-auto my-[50px] py-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] ">
+          <div className="w-full mx-auto my-[50px] py-4 grid grid-cols-1 gap-6 md:grid-cols-2 ">
             <Card
-              href="/mobiklinic"
+              href="/mobiclinic"
               category="Mobile App"
               projectName="Mobiklinic"
               projectImage={Mobiklinic}
@@ -114,10 +113,10 @@ const Home = () => {
 
       {/* about me */}
       <div className="relative w-full bg-white">
-        <div className="flex flex-col w-[90%] mx-auto relative pt-[100px] pb-8 ">
+        <div className="flex flex-col w-[90%] mx-auto relative pt-[100px] pb-8 max-w-[1500px]">
           <Header firstText="About." className="text-[80px] font-bold" />
           <div className="w-full flex flex-col justify-between mx-auto my-[50px] py-4 md:flex-row">
-            <div className="w-full flex relative justify-center md:w-1/2">
+            <div className="w-full relative md:w-1/2">
               <img src={Profile} alt="profile" />
               {/* <LazyImage src={Profile} alt="profile" /> */}
             </div>
@@ -150,10 +149,10 @@ const Home = () => {
       {/* shots */}
 
       <div className="relative w-full bg-white">
-        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 ">
+        <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 max-w-[1500px]">
           <Header firstText="shots." className="text-[80px] font-bold" />
 
-          <div className="w-full mx-auto my-[50px] py-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
+          <div className="w-full mx-auto my-[50px] py-4 grid grid-cols-1 gap-6 md:grid-cols-2">
             <Card
               category="Mobile App"
               projectName="Finance Mgt. App"
@@ -193,8 +192,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

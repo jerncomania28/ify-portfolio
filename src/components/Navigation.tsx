@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import NavLink from "./NavLink";
+import Footer from "./Footer";
 
 import Logo from "../assets/logo-text.svg";
 import ArrowUp from "../assets/ArrowUp.svg";
@@ -19,7 +20,7 @@ const Navigation = () => {
   return (
     <>
       <div className="w-full relative bg-header">
-        <div className="w-[90%] flex justify-between items-center mx-auto py-4">
+        <div className="w-[90%] flex justify-between items-center mx-auto py-[40px] max-w-[1500px]">
           <Link to="/">
             <img src={Logo} alt="logo" />
           </Link>
@@ -68,6 +69,7 @@ const Navigation = () => {
           className="border-[1px] bg-footer border-white p-3 rounded-full my-4 animate-bounce "
         />
       </a>
+      <Footer />
     </>
   );
 };

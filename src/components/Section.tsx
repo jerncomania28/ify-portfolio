@@ -7,8 +7,6 @@ interface SectionProps {
   children: React.ReactNode;
   rowWide?: string;
   src?: string;
-  heading?: string;
-  center?: boolean;
   imageClassName?: string;
 }
 
@@ -16,26 +14,18 @@ const Section: React.FC<SectionProps> = ({
   children,
   rowWide,
   src,
-  heading,
-  center,
   imageClassName,
 }) => {
   return (
-    <div className="flex flex-col w-[90%] mx-auto relative md:w-full ">
+    <div className="flex flex-col w-full mx-auto relative max-w-[1500px] md:w-full ">
       <div
-        className={`pt-[50px] pb-[50px] relative w-full mx-auto ${
-          center ? "md:w-[48%]" : "md:w-4/5"
-        } `}
-      >
-        <SubHeader color>{heading}</SubHeader>
-      </div>
-      <div
-        className={`w-full relative mx-auto flex flex-col justify-between my-[50px] md:w-4/5 ${rowWide}`}
+        className={`w-full relative flex flex-col mx-auto justify-between my-[50px] md:w-[90%] ${rowWide}`}
       >
         {children}
         {src && (
-          <div className="w-full flex relative justify-center my-2">
-            <LazyImage src={src} alt={src} className={imageClassName} />
+          <div className="w-full relative flex justify-center items-center my-2 md:w-[50%]">
+            {/* <LazyImage src={src} alt={src} className={imageClassName} /> */}
+            <img src={src} alt={src} className={imageClassName} />
           </div>
         )}
       </div>
