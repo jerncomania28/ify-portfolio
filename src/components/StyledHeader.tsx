@@ -2,9 +2,9 @@ import React from "react";
 
 interface StyledHeaderProps {
   className?: string;
-  number?: string;
-  firstText?: string;
-  secondText?: string;
+  number: string;
+  firstText: string;
+  secondText: string;
 }
 
 const StyledHeader: React.FC<StyledHeaderProps> = ({
@@ -16,10 +16,10 @@ const StyledHeader: React.FC<StyledHeaderProps> = ({
   return (
     <div className={`w-full relative flex flex-col font-fraunces ${className}`}>
       <h1>
-        <span className="font-thin">01 /</span>{" "}
-        <span className="font-bold">User</span>
+        <span className="font-thin">{`${number} /`}</span>{" "}
+        <span className="font-bold">{firstText}</span>
       </h1>
-      <h1 className="font-bold">Research.</h1>
+      <h1 className="font-bold">{secondText}</h1>
     </div>
   );
 };
