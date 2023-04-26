@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
 import StyledHeader from "../components/StyledHeader";
@@ -19,6 +21,7 @@ import MatUserFlow from "../assets/matcare/matcare-user_flow.svg";
 import MatUserProfile from "../assets/matcare/matcare-user_profile.svg";
 import MatPrototype from "../assets/matcare/matcare-type.svg";
 import MoboDropDown from "../assets/moboclinic/mobolclinic-dropdown.svg";
+import MatUserPersona from "../assets/matcare/matcare-user_persona.svg";
 
 const MatCare = () => {
   const TOOLS = ["Google docs", "Google meet", "Photoshop", "Figjam", "Figma"];
@@ -31,6 +34,13 @@ const MatCare = () => {
   ];
   const THE_TEAM = ["Ifeanyi Oji", "Oyeniran Ruth Oluwakemi"];
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="w-full relative">
       <div className="w-full relative bg-offwhite pt-[30px] pb-[100px]">
@@ -40,7 +50,7 @@ const MatCare = () => {
               firstText="Matcare."
               className="mb-4 text-[60px] font-bold md:text-[70px] xl:text-[96px]"
             />
-            <Paragraph className="text-[20px] my-4 leading-[40px] md:text-[24px]">
+            <Paragraph className="text-[20px] my-4 leading-[40px] md:text-[24px] font-figtree">
               Connect mothers with caregivers before & after delivery.
             </Paragraph>
           </div>
@@ -110,13 +120,13 @@ const MatCare = () => {
             />
             <a
               href="#"
-              className="text-footer text-[16px] font-[600px] inline-flex border-b-[1px] border-solid border-black w-[180px] cursor-pointer"
+              className="text-footer text-[16px] my-10 font-[600px] inline-flex border-b-[1px] border-solid border-black w-[180px] cursor-pointer"
             >
               <span>Skip to the fun part</span>
               <img src={MoboDropDown} alt="mobo-dropdown" className="mx-2" />
             </a>
           </div>
-          <div className="w-full relative flex justify-center flex-col items-center md:w-[50%] md:mx-3">
+          <div className="w-full relative flex justify-center flex-col items-center md:w-[50%] font-figtree text-[20px] md:mx-3">
             <Paragraph>
               Imagine just giving birth to a precious new life, but not having
               anyone to turn to for support.
@@ -144,7 +154,7 @@ const MatCare = () => {
               className="text-[50px] md:text-[80px] font-bold leading-[60px] md:leading-[96px] self-start"
             />
           </div>
-          <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
+          <div className="w-full relative flex flex-col md:w-[50%] font-figtree md:mx-3">
             <Paragraph className="text-[20px] text-offwhite">
               With our new mobile app,{" "}
               <span className="font-bold italic">
@@ -174,27 +184,32 @@ const MatCare = () => {
             number="01"
             firstText="The"
             secondText="Research."
-            className="text-[50px] md:text-[80px]"
+            className="text-[60px] md:text-[80px]"
           />
         </div>
       </div>
 
       <div className="w-full relative py-[50px] bg-footer">
-        <div className="w-[90%] mx-auto flex justify-between items-center flex-col relative py-[50px] text-white max-w-[1500px] md:flex-row">
-          <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
-            <Header
-              firstText="User Persona &"
-              secondText="Pain Points."
-              className="text-[50px] md:text-[60px] font-bold leading-[60px] md:leading-[56px] self-start"
-            />
+        <div className="w-[90%] mx-auto flex flex-col relative max-w-[1500px]">
+          <div className="w-full relative flex flex-col justify-between items-center text-white py-[50px] md:flex-row">
+            <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
+              <Header
+                firstText="User Persona &"
+                secondText="Pain Points."
+                className="text-[35px] md:text-[48px] font-bold leading-[40px] md:leading-[50px] self-start"
+              />
+            </div>
+            <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
+              <Paragraph className="text-[20px] text-offwhite font-figtree">
+                To verify our claims, we carried out virtual interviews with two
+                users who fall under the user groups we are designing for to
+                understand their experiences and pain-points post delivery and
+                the following insights were gathered.
+              </Paragraph>
+            </div>
           </div>
-          <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
-            <Paragraph className="text-[20px] text-offwhite">
-              To verify our claims, we carried out virtual interviews with two
-              users who fall under the user groups we are designing for to
-              understand their experiences and pain-points post delivery and the
-              following insights were gathered.
-            </Paragraph>
+          <div className="w-full flex justify-center items-center relative py-[50px]">
+            <img src={MatUserPersona} alt="mobo-map" className="object-cover" />
           </div>
         </div>
       </div>
@@ -204,11 +219,11 @@ const MatCare = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
             <Header
               firstText="User Flows."
-              className="text-[50px] md:text-[60px] font-bold leading-[60px] md:leading-[56px] self-start"
+              className="text-[35px] md:text-[48px] font-bold self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
-            <Paragraph className="text-[20px]">
+            <Paragraph className="text-[20px] font-figtree">
               The goal was to create a flow that maps out major paths the users
               may follow and how they experience them.
             </Paragraph>
@@ -228,7 +243,7 @@ const MatCare = () => {
             <Header
               firstText="Visual"
               secondText="Direction."
-              className="mb-4 text-[60px] font-bold md:text-[96px] md:leading-[75px]"
+              className="mb-4 text-[60px] font-bold md:text-[96px] leading-[65px] md:leading-[80px]"
             />
           </div>
           <div className="w-full relative flex flex-col justify-between items-center md:flex-row">
@@ -237,7 +252,7 @@ const MatCare = () => {
                 <Header
                   firstText="Colors-"
                   secondText="Sunset orange & smoky black."
-                  className="font-bold font-figtree text-[20px] mb-[20px] md:text-[24px] "
+                  className="font-bold font-figtree text-[20px] mb-[20px] leading-[30px] md:text-[24px] "
                 />
                 <Paragraph className="text-footer text-[20px] font-figtree">
                   Our Target audience are very prone to slip into depression so
@@ -248,7 +263,7 @@ const MatCare = () => {
                 <Header
                   firstText="Typography-"
                   secondText="Nunito & Nunito sans."
-                  className="font-bold font-figtree text-[20px] mb-[20px] md:text-[24px] "
+                  className="font-bold font-figtree text-[20px] leading-[30px] mb-[20px] md:text-[24px] "
                 />
                 <Paragraph className="text-footer text-[20px] font-figtree">
                   Nunito was chosen for its soft feel because it resonates with
@@ -272,7 +287,7 @@ const MatCare = () => {
             number="02"
             firstText="High-fidelity"
             secondText="Screens."
-            className="text-[40px] md:text-[60px]"
+            className="text-[60px] md:text-[80px]"
           />
         </div>
       </div>
@@ -282,7 +297,7 @@ const MatCare = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
             <Header
               firstText="Onboarding."
-              className="text-[50px] md:text-[60px] font-bold leading-[60px] md:leading-[56px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[56px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
@@ -304,7 +319,7 @@ const MatCare = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
             <Header
               firstText="Account Creation."
-              className="text-[50px] md:text-[60px] font-bold leading-[60px] md:leading-[56px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[56px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
@@ -326,7 +341,7 @@ const MatCare = () => {
           <div className="flex flex-col w-full relative md:w-[50%]">
             <Header
               firstText="Home Screen."
-              className="mb-4 text-[40px] font-bold md:text-[50px] xl:text-[70px]"
+              className="mb-4 text-[35px] font-bold md:text-[48px] xl:text-[70px]"
             />
             <Paragraph className="text-[20px] my-4 leading-[40px] md:text-[24px]">
               Users can choose from the options of Professional and experienced
@@ -334,7 +349,7 @@ const MatCare = () => {
               mums in their neighborhood/nearby
             </Paragraph>
           </div>
-          <div className="w-full relative md:w-[50%] flex justify-end items-center md:mx-3">
+          <div className="w-full my-8 relative md:w-[50%] flex justify-end items-center md:mx-3 md:my-auto">
             <img src={MatHomeScreen} alt="Mobo-hero" className="object-cover" />
           </div>
         </div>
@@ -346,7 +361,7 @@ const MatCare = () => {
             <Header
               firstText="Book an"
               secondText="Appointment."
-              className="text-[35px] md:text-[50px] xl:text-[60px] font-bold leading-[60px] md:leading-[60px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[60px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
@@ -375,11 +390,11 @@ const MatCare = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
             <Header
               firstText="Payments."
-              className="text-[50px] md:text-[60px] font-bold leading-[60px] md:leading-[56px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[56px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
-            <Paragraph className="text-[20px]">
+            <Paragraph className="text-[20px] font-figtree">
               Users make payment immediately after imputing or updating their
               details
             </Paragraph>
@@ -398,11 +413,11 @@ const MatCare = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
             <Header
               firstText="Tracking."
-              className="text-[50px] md:text-[60px] font-bold leading-[60px] md:leading-[56px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[56px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
-            <Paragraph className="text-[20px]">
+            <Paragraph className="text-[20px] font-figtree">
               Caregivers can be tracked by the user when coming for their
               appointment
             </Paragraph>
@@ -421,11 +436,11 @@ const MatCare = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
             <Header
               firstText="Community."
-              className="text-[50px] md:text-[60px] font-bold leading-[60px] md:leading-[56px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[56px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
-            <Paragraph className="text-[20px]">
+            <Paragraph className="text-[20px] font-figtree">
               Users can connect with other mums nearby, create posts, reply and
               like other mum’s post.
             </Paragraph>
@@ -444,7 +459,7 @@ const MatCare = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
             <Header
               firstText="User Profile."
-              className="text-[50px] md:text-[60px] font-bold leading-[60px] md:leading-[56px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[56px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
@@ -471,13 +486,13 @@ const MatCare = () => {
           <div className="flex flex-col w-full relative md:w-[50%]">
             <Header
               firstText="Prototype."
-              className="mb-4 text-[60px] font-bold md:text-[96px]"
+              className="mb-4 text-[35px] font-bold md:text-[48px]"
             />
             <Paragraph className="text-[20px] my-4 leading-[40px] md:text-[24px]">
               Lets see a quick flow of how users can achieve there goals
             </Paragraph>
           </div>
-          <div className="w-full relative md:w-[50%] flex justify-end items-center">
+          <div className="w-full my-8 relative md:w-[50%] flex justify-end items-center md:my-auto">
             <img
               src={MatPrototype}
               alt="Mat-prototype"

@@ -15,21 +15,20 @@ import TvMovieApp from "../assets/tv_movie_app.svg";
 import LeadershipBoard from "../assets/leadership-board.svg";
 import OnboardingView from "../assets/onboarding-view.svg";
 import FinanceMgtApp from "../assets/finance-mgt-app.svg";
-import HeroImage from "../assets/hero-img.svg";
 
 const Home = () => {
   return (
     <div className="w-full relative">
       {/* hero */}
-      <div className="w-full relative h-[100vh] bg-header flex items-center justify-center">
-        <div className="w-[90%] relative mx-auto flex flex-col justify-center items-center md:flex-row max-w-[1500px]">
-          <div className="w-full relative flex flex-col md:w-1/2 ">
+      <div className="w-full relative h-[100vh] bg-hero bg-no-repeat flex items-center justify-center">
+        <div className="w-[90%] relative mx-auto flex flex-col items-center md:flex-row max-w-[1500px]">
+          <div className="w-full relative flex flex-col md:w-[70%] ">
             <Header
               firstText="Designing"
               secondText="Striking Visuals."
-              className="font-bold w-full mx-auto text-white text-[40px] md:text-[70px] md:leading-[80px] md:w-full"
+              className="font-bold w-full mx-auto text-white text-[60px] md:text-[85px] leading-[75px] md:leading-[90px] md:w-full"
             />
-            <Paragraph className="font-extralight w-full mx-auto text-white md:w-auto">
+            <Paragraph className="w-full mx-auto text-white font-figtree text-[20px] my-8">
               I’m Ifeanyi, a{" "}
               <span className="italic font-bold"> UI/UX designer</span> and like
               a sculptor, I chip away at the rough edges of your design until
@@ -47,13 +46,6 @@ const Home = () => {
                 Contact Me
               </Button>
             </div>
-          </div>
-          <div className="w-full relative hidden md:w-1/2 md:flex">
-            <img
-              src={HeroImage}
-              alt="hero-img"
-              className="w-full object-cover"
-            />
           </div>
         </div>
       </div>
@@ -121,22 +113,22 @@ const Home = () => {
               {/* <LazyImage src={Profile} alt="profile" /> */}
             </div>
             <div className="flex flex-col justify-center w-full relative my-4 md:my-auto md:w-1/2 md:ml-8">
-              <h1 className="text-[32px] font-bold font-fraunces">
+              <h1 className="text-[32px] font-bold font-fraunces text-footer">
                 Ifeanyi Oji . UI/UX Designer
               </h1>
-              <Paragraph className="text-[16px] font-extralight">
+              <Paragraph className="text-[16px] font-extralight font-figtree">
                 As a pharmacist, I realized the importance of clear
                 communication and accessible information. But I wanted to do
                 more. That's why I dove into the world of user-centered design,
                 where I discovered a passion for creating intuitive experiences.
               </Paragraph>
-              <Paragraph className="text-[16px] font-extralight">
+              <Paragraph className="text-[16px] font-extralight font-figtree">
                 Now, I bring my unique perspective to every project I work on.
                 With a background in healthcare and a love for all things
                 design, I balance scientific rigor with creative innovation to
                 create amazing experiences for people from all walks of life.
               </Paragraph>
-              <Paragraph className="text-[16px] font-extralight">
+              <Paragraph className="text-[16px] font-extralight font-figtree">
                 If you're looking for a designer who understands the needs and
                 desires of the people who will be using your product, let's work
                 together to create something great.
@@ -150,9 +142,9 @@ const Home = () => {
 
       <div className="relative w-full bg-white">
         <div className="flex flex-col w-[90%] mx-auto relative pt-[70px] pb-8 max-w-[1500px]">
-          <Header firstText="shots." className="text-[80px] font-bold" />
+          <Header firstText="Shots." className="text-[80px] font-bold" />
 
-          <div className="w-full mx-auto my-[50px] py-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="w-full mx-auto my-[50px] py-[40px] grid grid-cols-1 gap-6 md:grid-cols-2">
             <Card
               category="Mobile App"
               projectName="Finance Mgt. App"

@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className={`relative font-figtree`}>
-      <div className="w-full bg-card relative h-[350px]">
+      <div className="w-full bg-card relative h-[350px] py-[50px]">
         <img
           src={projectImage}
           alt="card-img"
@@ -31,7 +31,7 @@ const Card: React.FC<CardProps> = ({
       </div>
       <div className="w-full relative flex flex-col px-2 py-3">
         <div className="flex justify-between items-center my-2">
-          <h3 className="text-footer text-capitalize font-bolder text-[20px] leading-[28px]">
+          <h3 className="text-footer text-capitalize font-bold text-[20px] leading-[28px]">
             {projectName}
           </h3>
           <p className="text-card-header-color text-[16px] font-[400px]">
@@ -49,7 +49,7 @@ const Card: React.FC<CardProps> = ({
             to={href}
             className="text-footer text-[16px] font-[600px] inline-flex border-b-[1px] border-solid border-black w-[150px] cursor-pointer"
           >
-            <span> Read case study</span>{" "}
+            <span className="font-bold"> Read case study</span>{" "}
             <img src={Padlock} alt="padlock-icon" className="mx-1" />
           </Link>
         )}

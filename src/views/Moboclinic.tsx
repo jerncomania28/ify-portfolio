@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Paragraph from "../components/Paragraph";
 import Header from "../components/Header";
 import StyledHeader from "../components/StyledHeader";
@@ -38,6 +40,14 @@ const Moboclinic = () => {
     Family: "Husband , three kids",
     Occupation: "Microbiologist , runs a bridal store",
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="w-full relative">
       <div className="w-full relative bg-offwhite pt-[30px] pb-[100px]">
@@ -106,9 +116,9 @@ const Moboclinic = () => {
             />
             <a
               href="#"
-              className="text-footer text-[16px] font-[600px] inline-flex border-b-[1px] border-solid border-black w-[180px] cursor-pointer"
+              className="text-footer text-[16px] font-[600px] inline-flex border-b-[1px] border-solid border-black w-[200px] cursor-pointer my-[2rem]"
             >
-              <span>Skip to the fun part</span>
+              <span className="font-bold">Skip to the fun part</span>
               <img src={MoboDropDown} alt="mobo-dropdown" className="mx-2" />
             </a>
           </div>
@@ -144,7 +154,7 @@ const Moboclinic = () => {
               className="text-[50px] md:text-[80px] font-bold leading-[60px] md:leading-[96px]"
             />
           </div>
-          <div className="w-full relative flex justify-center flex-col items-center md:w-[50%] md:mx-3">
+          <div className="w-full relative flex justify-center flex-col items-center md:w-[50%] font-figtree md:mx-3">
             <Paragraph className="text-[20px]">
               From over-saturated general hospitals to very rigorous procedures
               and even unqualified persons assuming roles they should not.
@@ -173,7 +183,7 @@ const Moboclinic = () => {
               className="text-[50px] md:text-[80px] font-bold leading-[60px] md:leading-[96px] self-start"
             />
           </div>
-          <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
+          <div className="w-full relative flex flex-col font-figtree md:w-[50%] md:mx-3">
             <Paragraph className="text-[20px]">
               This innovative solution aims to improve the efficiency and
               effectiveness of the healthcare system by eliminating barriers to
@@ -211,13 +221,13 @@ const Moboclinic = () => {
               className="text-[35px] md:text-[48px] font-bold text-white"
             />
           </div>
-          <div className="w-full relative flex justify-center flex-col items-center md:w-[50%] md:mx-3">
+          <div className="w-full relative flex justify-center flex-col items-center font-figtree md:w-[50%] md:mx-3">
             <Paragraph className="text-[20px]">
               In order to validate my secondary research claims, I conducted
               virtual interviews with 5 potential users. The aim of these
               interviews was to gain a deeper understanding of the following
             </Paragraph>
-            <ul className="text-[20px] font-thin list-disc">
+            <ul className="text-[20px] list-disc">
               <li className="my-4 list-custom-bullet">
                 The processes Nigerians take when they fall ill and want to
                 access help. What is their first point of call and where do they
@@ -246,14 +256,14 @@ const Moboclinic = () => {
       </div>
 
       <div className="w-full relative py-[50px] bg-white">
-        <div className="w-[90%] mx-auto flex justify-between items-center flex-col relative py-[50px] max-w-[1500px] md:flex-row">
+        <div className="w-[90%] mx-auto flex justify-between items-end flex-col relative py-[50px] max-w-[1500px] md:flex-row">
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
             <Header
               firstText="Empathy Map."
-              className="text-[50px] md:text-[80px] font-bold leading-[60px] md:leading-[96px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[96px]"
             />
           </div>
-          <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
+          <div className="w-full relative flex flex-col font-figtree md:w-[50%] md:mx-3">
             <Paragraph className="text-[20px]">
               From the users that we interviewed, I extracted a persona, a
               representation of the user group, and designed the app around this
@@ -351,10 +361,10 @@ const Moboclinic = () => {
 
       <div className="w-full relative py-[50px] bg-footer">
         <div className="w-[90%] mx-auto flex justify-between items-center flex-col relative py-[50px] text-white max-w-[1500px] md:flex-row">
-          <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb_auto">
+          <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
             <Header
               firstText="User Flow."
-              className="text-[35px] md:text-[40px] xl:text-[65px] font-bold leading-[60px] md:leading-[96px] self-start"
+              className="text-[35px] md:text-[48px] xl:text-[65px] font-bold leading-[60px] md:leading-[96px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col items-center md:w-[50%] md:mx-3">
@@ -402,7 +412,7 @@ const Moboclinic = () => {
               number="02"
               firstText="High-fidelity"
               secondText="Screens."
-              className="text-[40px] text-white md:text-[55px]"
+              className="text-[60px] text-white md:text-[60px]"
             />
           </div>
           <div className="w-full relative my-4 md:my-auto md:w-[50%] flex justify-end items-center md:mx-3">
@@ -420,7 +430,7 @@ const Moboclinic = () => {
           <div className="flex flex-col w-full relative md:w-[50%]">
             <Header
               firstText="Onboarding."
-              className="mb-4 text-[60px] font-bold md:text-[70px] xl:text-[96px]"
+              className="mb-4 text-[35px] font-bold md:text-[48px]"
             />
             <Paragraph className="text-[20px] my-4 leading-[40px]">
               3 simple onboarding screens to introduce the services to the user
@@ -442,7 +452,7 @@ const Moboclinic = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb_auto">
             <Header
               firstText="Authentication."
-              className="text-[35px] md:text-[40px] xl:text-[65px] font-bold leading-[60px] md:leading-[96px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
@@ -469,7 +479,7 @@ const Moboclinic = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb_auto">
             <Header
               firstText="Create Profile."
-              className="text-[35px] md:text-[40px] xl:text-[65px] font-bold leading-[60px] md:leading-[96px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[96px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
@@ -498,7 +508,7 @@ const Moboclinic = () => {
           <div className="flex flex-col w-full relative md:w-[50%]">
             <Header
               firstText="Home."
-              className="mb-4 text-[60px] font-bold md:text-[70px] xl:text-[96px]"
+              className="mb-4 text-[35px] font-bold md:text-[48px]"
             />
             <Paragraph className="text-[20px] my-4 leading-[40px]">
               The core function of the app is to enable users connect with
@@ -519,11 +529,11 @@ const Moboclinic = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb_auto">
             <Header
               firstText="Find your Doctor."
-              className="text-[35px] md:text-[40px] xl:text-[65px] font-bold leading-[60px] md:leading-[96px] self-start"
+              className="text-[35px] md:text-[48px] font-bold self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
-            <Paragraph className="text-[20px]">
+            <Paragraph className="text-[20px] font-figtree">
               Users can search for doctors by scrolling down the list of doctors
               or choose based on recommendations or categories. Selecting any
               doctor will provide further details and the user can proceed to
@@ -545,7 +555,7 @@ const Moboclinic = () => {
             <Header
               firstText="Book an"
               secondText="Appointment."
-              className="text-[50px] md:text-[60px] xl:text-[80px] font-bold leading-[60px] md:leading-[96px] self-start"
+              className="text-[35px] md:text-[48px] md:leading-[50px] font-bold self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">
@@ -572,7 +582,7 @@ const Moboclinic = () => {
           <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb_auto">
             <Header
               firstText="Consultation."
-              className="text-[50px] md:text-[60px] xl:text-[80px] font-bold leading-[60px] md:leading-[96px] self-start"
+              className="text-[35px] md:text-[48px] font-bold leading-[60px] md:leading-[96px] self-start"
             />
           </div>
           <div className="w-full relative flex flex-col md:w-[50%] md:mx-3">

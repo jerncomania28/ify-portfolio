@@ -14,22 +14,22 @@ const Footer = () => {
           secondText="together."
           className="font-bold mx-auto text-[80px] w-full leading-[70px] md:leading-[88px] text-white justify-self-start"
         />
-        <Paragraph className="font-figtree text-footer-text w-full justify-self-start text-[20px] my-4 md:my-auto md:text-[25px]">
+        <Paragraph className="font-figtree text-footer-text w-full justify-self-start text-[20px] my-[15px] md:my-[30px] md:text-[25px]">
           Ready to stand out from the crowd? Let's work together to <br />{" "}
           create a design that's as unique as you are.
         </Paragraph>
-        <div className="inline-flex my-8 self-center md:self-start">
+        <div className="inline-flex self-center md:self-start">
           <Button
             icon={Envelope}
             border
-            className="hover:bg-white hover:text-black border-white text-white py-3 w-[150px]"
+            className="hover:bg-white hover:text-black border-white text-white py-3 w-[150px] font-figtree"
           >
             Email
           </Button>
           <Button
             icon={LinkedinLogo}
             border
-            className="mx-3 hover:bg-white hover:text-black border-white text-white py-3 w-[150px]"
+            className="mx-3 hover:bg-white hover:text-black border-white text-white py-3 w-[150px] font-figtree"
           >
             LinkedIn
           </Button>

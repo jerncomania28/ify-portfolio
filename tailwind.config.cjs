@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{tsx,ts,js,jsx}"],
   theme: {
+    backgroundImage: {
+      hero: "url('assets/background-hero.svg')",
+    },
     extend: {
       colors: {
         header: "#1A1A1A",
