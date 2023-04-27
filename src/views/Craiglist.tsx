@@ -331,6 +331,120 @@ const Craiglist = () => {
           </div>
         </div>
       </div>
+
+      <div className="w-full relative bg-offwhite">
+        <div className="w-[90%] mx-auto flex flex-col justify-center items-center relative py-[70px] max-w-[1500px]">
+          <img
+            src={CraigCategories}
+            alt="craiglist-categories"
+            className="object-cover my-3"
+          />
+          <img
+            src={CraigCategoriesSub}
+            alt="craiglist-categories-sub"
+            className="object-cover my-3"
+          />
+        </div>
+      </div>
+
+      <div className="w-full relative py-[50px]">
+        <div className="w-[90%] mx-auto flex flex-col relative max-w-[1500px]">
+          <div className="w-full relative flex flex-col justify-start items-start py-[50px]">
+            <Header
+              firstText="Event Listing &"
+              secondText="Footer."
+              className="text-[35px] md:text-[48px] font-bold leading-[40px] md:leading-[50px] self-start"
+            />
+
+            <Paragraph className="text-[20px] font-figtree">
+              The footer was redesigned for easier navigation through the site.
+              The menu links were reorganized and grouped by type to make
+              finding the information you need as easy as possible.
+            </Paragraph>
+            <Paragraph className="text-[20px] font-figtree">
+              Links to download the app on both IOS and android platforms were
+              included.
+            </Paragraph>
+          </div>
+          <div className="w-full flex justify-center items-center relative py-[50px]">
+            <img
+              src={CraigEventListing}
+              alt="mobo-map"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full relative py-[50px]">
+        <div className="w-[90%] mx-auto flex justify-start items-start flex-col relative py-[50px] max-w-[1500px] md:flex-row">
+          <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
+            <Header
+              firstText="Search Results."
+              className="text-[35px] md:text-[48px] font-bold self-start"
+            />
+          </div>
+          <div className="w-full relative flex flex-col md:w-[50%] font-figtree md:mx-3">
+            <Paragraph className="text-[20px]">
+              The search sorting feature was optimized and made easily
+              accessible to users. Results are displayed below in card formats.
+            </Paragraph>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full relative bg-offwhite">
+        <div className="w-[90%] mx-auto flex justify-center items-center relative py-[70px] max-w-[1500px]">
+          <img src={CraigJobSearch} alt="mobo-map" className="object-cover" />
+        </div>
+      </div>
+
+      <div className="w-full relative py-[50px]">
+        <div className="w-[90%] mx-auto flex justify-start items-start flex-col relative py-[50px] max-w-[1500px] md:flex-row">
+          <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
+            <Header
+              firstText="Details Page."
+              className="text-[35px] md:text-[48px] font-bold self-start"
+            />
+          </div>
+          <div className="w-full relative flex flex-col md:w-[50%] font-figtree md:mx-3">
+            <Paragraph className="text-[20px]">
+              The service detail page was redesigned so users can digest and
+              understand the information given by the service provider. A map
+              with proper tracking UI and a prominent call to action were among
+              the elements adjusted so users can find the page easy to use.
+            </Paragraph>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full relative bg-offwhite">
+        <div className="w-[90%] mx-auto flex justify-center items-center relative py-[70px] max-w-[1500px]">
+          <img src={CraigDetailsPage} alt="mobo-map" className="object-cover" />
+        </div>
+      </div>
+
+      <div className="w-full relative py-[50px]">
+        <div className="w-[90%] mx-auto flex justify-start items-start flex-col relative py-[50px] max-w-[1500px] md:flex-row">
+          <div className="flex flex-col w-full relative mb-[50px] md:w-[50%] md:mb-auto">
+            <Header
+              firstText="Prototype."
+              className="text-[35px] md:text-[48px] font-bold self-start"
+            />
+          </div>
+          <div className="w-full relative flex flex-col md:w-[50%] font-figtree md:mx-3">
+            <Paragraph className="text-[20px]">
+              A quick demonstration of the core screens
+            </Paragraph>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full relative bg-offwhite">
+        <div className="w-[90%] mx-auto flex justify-center items-center relative py-[70px] max-w-[1500px]">
+          <img src={CraigPrototype} alt="mobo-map" className="object-cover" />
+        </div>
+      </div>
     </div>
   );
 };

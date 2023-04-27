@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+
 const Coverly = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="w-full relative ">
       <div className="w-full relative bg-white">
