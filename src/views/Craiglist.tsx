@@ -3,21 +3,22 @@ import { useEffect } from "react";
 import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
 import StyledHeader from "../components/StyledHeader";
+import LazyImage from "../components/LazyImage";
 
-import CraigHome from "../assets/craiglist/craiglist-home.svg";
-import CraigHighFidelity from "../assets/craiglist/craiglist-high_fidelity.svg";
-import CraigJobSearch from "../assets/craiglist/craiglist-job_search.svg";
-import CraigObjectives from "../assets/craiglist/craiglist-objectives.svg";
-import CraigEventListing from "../assets/craiglist/craiglist-event_listings.svg";
-import CraigFonts from "../assets/craiglist/craiglist-fonts.svg";
-import CraigColors from "../assets/craiglist/craiglist-colors.svg";
-import CraigCategories from "../assets/craiglist/craiglist-categories.svg";
-import CraigCategoriesSub from "../assets/craiglist/craiglist-categories_sub.svg";
-import CraigProjectGoals from "../assets/craiglist/craigist-project_goals.svg";
-import CraigDetailsPage from "../assets/craiglist/craiglist-details_page.svg";
-import CraigPrototype from "../assets/craiglist/craiglist-prototype.svg";
-import CraigHeroSection from "../assets/craiglist/craiglist-hero_section.svg";
-import MoboDropDown from "../assets/moboclinic/mobolclinic-dropdown.svg";
+import CraigHome from "../assets/craiglist/craiglist-home.png";
+import CraigHighFidelity from "../assets/craiglist/craiglist-high_fidelity.png";
+import CraigJobSearch from "../assets/craiglist/craiglist-job_search.png";
+import CraigObjectives from "../assets/craiglist/craiglist-objectives.png";
+import CraigEventListing from "../assets/craiglist/craiglist-event_listings.png";
+import CraigFonts from "../assets/craiglist/craiglist-fonts.png";
+import CraigColors from "../assets/craiglist/craiglist-colors.png";
+import CraigCategories from "../assets/craiglist/craiglist-categories.png";
+import CraigCategoriesSub from "../assets/craiglist/craiglist-categories_sub.png";
+import CraigProjectGoals from "../assets/craiglist/craigist-project_goals.png";
+import CraigDetailsPage from "../assets/craiglist/craiglist-details_page.png";
+import CraigPrototype from "../assets/craiglist/craiglist-prototype.png";
+import CraigHeroSection from "../assets/craiglist/craiglist-hero_section.png";
+import MoboDropDown from "../assets/moboclinic/mobolclinic-dropdown.png";
 
 const Craiglist = () => {
   const TIME_FRAME = ["Research : 1 Week", "Visual design : 1 week"];
@@ -45,7 +46,7 @@ const Craiglist = () => {
             </Paragraph>
           </div>
           <div className="w-full relative md:w-[50%] flex justify-end items-center md:mx-3">
-            <img src={CraigHome} alt="Mobo-hero" className="object-cover" />
+            <LazyImage src={CraigHome} alt="Mobo-hero" className="object-cover" />
           </div>
         </div>
       </div>
@@ -101,7 +102,7 @@ const Craiglist = () => {
               className="text-footer text-[16px] my-10 font-[600px] inline-flex border-b-[1px] border-solid border-black w-[180px] cursor-pointer"
             >
               <span>Skip to the fun part</span>
-              <img src={MoboDropDown} alt="mobo-dropdown" className="mx-2" />
+              <LazyImage src={MoboDropDown} alt="mobo-dropdown" className="mx-2" />
             </a>
           </div>
           <div className="w-full relative flex  flex-col  md:w-[50%] font-figtree text-[20px] md:mx-3">
@@ -121,7 +122,7 @@ const Craiglist = () => {
 
       <div className="w-full relative bg-footer">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[50px] max-w-[1500px]">
-          <img
+          <LazyImage
             src={CraigProjectGoals}
             alt="mobo-map"
             className="object-cover"
@@ -159,7 +160,7 @@ const Craiglist = () => {
             </div>
           </div>
           <div className="w-full flex justify-center items-center relative py-[50px]">
-            <img
+            <LazyImage
               src={CraigObjectives}
               alt="mobo-map"
               className="object-cover"
@@ -218,7 +219,7 @@ const Craiglist = () => {
             />
           </div>
           <div className="w-full flex justify-center items-center relative py-[50px]">
-            <img
+            <LazyImage
               src={CraigHighFidelity}
               alt="mobo-map"
               className="object-cover"
@@ -260,8 +261,8 @@ const Craiglist = () => {
               </div>
             </div>
             <div className="w-full flex flex-col justify-center items-center md:w[50%]">
-              <img src={CraigColors} alt="mat-font" />
-              <img src={CraigFonts} alt="mat-colors" />
+              <LazyImage src={CraigColors} alt="mat-font" />
+              <LazyImage src={CraigFonts} alt="mat-colors" />
             </div>
           </div>
         </div>
@@ -309,7 +310,7 @@ const Craiglist = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[70px] max-w-[1500px]">
-          <img src={CraigHeroSection} alt="mobo-map" className="object-cover" />
+          <LazyImage src={CraigHeroSection} alt="mobo-map" className="object-cover" />
         </div>
       </div>
 
@@ -334,12 +335,12 @@ const Craiglist = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex flex-col justify-center items-center relative py-[70px] max-w-[1500px]">
-          <img
+          <LazyImage
             src={CraigCategories}
             alt="craiglist-categories"
             className="object-cover my-3"
           />
-          <img
+          <LazyImage
             src={CraigCategoriesSub}
             alt="craiglist-categories-sub"
             className="object-cover my-3"
@@ -367,7 +368,7 @@ const Craiglist = () => {
             </Paragraph>
           </div>
           <div className="w-full flex justify-center items-center relative py-[50px]">
-            <img
+            <LazyImage
               src={CraigEventListing}
               alt="mobo-map"
               className="object-cover"
@@ -395,7 +396,7 @@ const Craiglist = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[70px] max-w-[1500px]">
-          <img src={CraigJobSearch} alt="mobo-map" className="object-cover" />
+          <LazyImage src={CraigJobSearch} alt="mobo-map" className="object-cover" />
         </div>
       </div>
 
@@ -420,7 +421,7 @@ const Craiglist = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[70px] max-w-[1500px]">
-          <img src={CraigDetailsPage} alt="mobo-map" className="object-cover" />
+          <LazyImage src={CraigDetailsPage} alt="mobo-map" className="object-cover" />
         </div>
       </div>
 
@@ -442,7 +443,7 @@ const Craiglist = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[70px] max-w-[1500px]">
-          <img src={CraigPrototype} alt="mobo-map" className="object-cover" />
+          <LazyImage src={CraigPrototype} alt="mobo-map" className="object-cover" />
         </div>
       </div>
     </div>

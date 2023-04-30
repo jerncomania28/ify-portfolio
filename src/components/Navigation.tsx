@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import NavLink from "./NavLink";
 import Footer from "./Footer";
 
-import Logo from "../assets/logo-text.svg";
-import ArrowUp from "../assets/ArrowUp.svg";
+import Logo from "../assets/logo-text.png";
+import ArrowUp from "../assets/ArrowUp.png";
 
 const NAV_ROUTES = ["Home", "About me", "Projects", "Email Me", "View My CV"];
 

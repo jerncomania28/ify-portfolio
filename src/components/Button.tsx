@@ -2,7 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   children: React.ReactNode;
-  icon: string;
+  icon: React.ReactNode;
   border?: boolean;
   className?: string;
   href?: string;
@@ -23,8 +23,8 @@ const Button: React.FC<ButtonProps> = ({
         border ? "border-[1px] border-solid" : ""
       } ${className}`}
     >
-      {children}
-      <img src={icon} alt="icon" className="mx-2 w-6" />
+      <span className="mr-3">{children}</span>
+      {icon}
     </a>
   );
 };

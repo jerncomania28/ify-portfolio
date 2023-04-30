@@ -3,24 +3,25 @@ import { useEffect } from "react";
 import Paragraph from "../components/Paragraph";
 import Header from "../components/Header";
 import StyledHeader from "../components/StyledHeader";
+import LazyImage from "../components/LazyImage";
 
-import MoboAuthentication from "../assets/moboclinic/moboclinic-authentication.svg";
-import MoboBookAppointment from "../assets/moboclinic/moboclinic-book_appointment.svg";
-import MoboConsultation from "../assets/moboclinic/moboclinic-consultation.svg";
-import MoboCreateProfile from "../assets/moboclinic/moboclinic-create_profile.svg";
-import MoboFindDoctor from "../assets/moboclinic/moboclinic-find_doctor.svg";
-import MoboHero from "../assets/moboclinic/moboclinic-hero.svg";
-import MoboHighFidelity from "../assets/moboclinic/moboclinic-high_fidelity.svg";
-import MoboHome from "../assets/moboclinic/moboclinic-home.svg";
-import MoboMap from "../assets/moboclinic/moboclinic-map.svg";
-import MoboOnboarding from "../assets/moboclinic/moboclinic-onboarding.svg";
-import MoboPersona from "../assets/moboclinic/moboclinic-persona.svg";
-import MoboPharm from "../assets/moboclinic/moboclinic-pharm.svg";
-import MoboSolution from "../assets/moboclinic/moboclinic-solution.svg";
-import MoboUserFlow from "../assets/moboclinic/moboclinic-user_flow.svg";
-import MoboWireFrame from "../assets/moboclinic/moboclinic-wireframe.svg";
-import MoboDropDown from "../assets/moboclinic/mobolclinic-dropdown.svg";
-import MoboQuote from "../assets/moboclinic/moboclinic-quotes.svg";
+import MoboAuthentication from "../assets/moboclinic/moboclinic-authentication.png";
+import MoboBookAppointment from "../assets/moboclinic/moboclinic-book_appointment.png";
+import MoboConsultation from "../assets/moboclinic/moboclinic-consultation.png";
+import MoboCreateProfile from "../assets/moboclinic/moboclinic-create_profile.png";
+import MoboFindDoctor from "../assets/moboclinic/moboclinic-find_doctor.png";
+import MoboHero from "../assets/moboclinic/moboclinic-hero.png";
+import MoboHighFidelity from "../assets/moboclinic/moboclinic-high_fidelity.png";
+import MoboHome from "../assets/moboclinic/moboclinic-home.png";
+import MoboMap from "../assets/moboclinic/moboclinic-map.png";
+import MoboOnboarding from "../assets/moboclinic/moboclinic-onboarding.png";
+import MoboPersona from "../assets/moboclinic/moboclinic-persona.png";
+import MoboPharm from "../assets/moboclinic/moboclinic-pharm.png";
+import MoboSolution from "../assets/moboclinic/moboclinic-solution.png";
+import MoboUserFlow from "../assets/moboclinic/moboclinic-user_flow.png";
+import MoboWireFrame from "../assets/moboclinic/moboclinic-wireframe.png";
+import MoboDropDown from "../assets/moboclinic/mobolclinic-dropdown.png";
+import MoboQuote from "../assets/moboclinic/moboclinic-quotes.png";
 
 const Moboclinic = () => {
   const TOOLS = ["Google docs", "Google meet", "Photoshop", "Figjam", "Figma"];
@@ -63,7 +64,7 @@ const Moboclinic = () => {
             </Paragraph>
           </div>
           <div className="w-full relative md:w-[50%] flex justify-end items-center md:mx-3">
-            <img src={MoboHero} alt="Mobo-hero" className="object-cover" />
+            <LazyImage src={MoboHero} alt="Mobo-hero" className="object-cover" />
           </div>
         </div>
       </div>
@@ -119,7 +120,7 @@ const Moboclinic = () => {
               className="text-footer text-[16px] font-[600px] inline-flex border-b-[1px] border-solid border-black w-[200px] cursor-pointer my-[2rem]"
             >
               <span className="font-bold">Skip to the fun part</span>
-              <img src={MoboDropDown} alt="mobo-dropdown" className="mx-2" />
+              <LazyImage src={MoboDropDown} alt="mobo-dropdown" className="mx-2" />
             </a>
           </div>
           <div className="w-full relative flex justify-center flex-col items-center md:w-[50%] md:mx-3">

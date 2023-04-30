@@ -3,25 +3,26 @@ import { useEffect } from "react";
 import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
 import StyledHeader from "../components/StyledHeader";
+import LazyImage from "../components/LazyImage";
 
-import MatAccount from "../assets/matcare/matcare-account_creation.svg";
-import MatBookAppointment from "../assets/matcare/matcare-book_appointment.svg";
-import MatBookAppointmentTwo from "../assets/matcare/matcare-book_appointment_2.svg";
-import MatColors from "../assets/matcare/matcare-colors.svg";
-import MatCommunity from "../assets/matcare/matcare-community.svg";
-import MatFont from "../assets/matcare/matcare-font.svg";
-import MatHome from "../assets/matcare/matcare-home.svg";
-import MatHomeScreen from "../assets/matcare/matcare-home_screen.svg";
-import MatOnboarding from "../assets/matcare/matcare-onboarding.svg";
-import MatPayment from "../assets/matcare/matcare-payment.svg";
-import MatProblem from "../assets/matcare/matcare-problem.svg";
-import MatSolution from "../assets/matcare/matcare-solution.svg";
-import MatTracking from "../assets/matcare/matcare-tracking.svg";
-import MatUserFlow from "../assets/matcare/matcare-user_flow.svg";
-import MatUserProfile from "../assets/matcare/matcare-user_profile.svg";
-import MatPrototype from "../assets/matcare/matcare-type.svg";
-import MoboDropDown from "../assets/moboclinic/mobolclinic-dropdown.svg";
-import MatUserPersona from "../assets/matcare/matcare-user_persona.svg";
+import MatAccount from "../assets/matcare/matcare-account_creation.png";
+import MatBookAppointment from "../assets/matcare/matcare-book_appointment.png";
+import MatBookAppointmentTwo from "../assets/matcare/matcare-book_appointment_2.png";
+import MatColors from "../assets/matcare/matcare-colors.png";
+import MatCommunity from "../assets/matcare/matcare-community.png";
+import MatFont from "../assets/matcare/matcare-font.png";
+import MatHome from "../assets/matcare/matcare-home.png";
+import MatHomeScreen from "../assets/matcare/matcare-home_screen.png";
+import MatOnboarding from "../assets/matcare/matcare-onboarding.png";
+import MatPayment from "../assets/matcare/matcare-payment.png";
+import MatProblem from "../assets/matcare/matcare-problem.png";
+import MatSolution from "../assets/matcare/matcare-solution.png";
+import MatTracking from "../assets/matcare/matcare-tracking.png";
+import MatUserFlow from "../assets/matcare/matcare-user_flow.png";
+import MatUserProfile from "../assets/matcare/matcare-user_profile.png";
+import MatPrototype from "../assets/matcare/matcare-type.png";
+import MoboDropDown from "../assets/moboclinic/mobolclinic-dropdown.png";
+import MatUserPersona from "../assets/matcare/matcare-user_persona.png";
 
 const MatCare = () => {
   const TOOLS = ["Google docs", "Google meet", "Photoshop", "Figjam", "Figma"];
@@ -55,7 +56,7 @@ const MatCare = () => {
             </Paragraph>
           </div>
           <div className="w-full relative md:w-[50%] flex justify-end items-center md:mx-3">
-            <img src={MatHome} alt="Mobo-hero" className="object-cover" />
+            <LazyImage src={MatHome} alt="Mobo-hero" className="object-cover" />
           </div>
         </div>
       </div>
@@ -123,7 +124,7 @@ const MatCare = () => {
               className="text-footer text-[16px] my-10 font-[600px] inline-flex border-b-[1px] border-solid border-black w-[180px] cursor-pointer"
             >
               <span>Skip to the fun part</span>
-              <img src={MoboDropDown} alt="mobo-dropdown" className="mx-2" />
+              <LazyImage src={MoboDropDown} alt="mobo-dropdown" className="mx-2" />
             </a>
           </div>
           <div className="w-full relative flex justify-center flex-col items-center md:w-[50%] font-figtree text-[20px] md:mx-3">
@@ -142,7 +143,7 @@ const MatCare = () => {
       </div>
 
       <div className="w-full relative">
-        <img src={MatProblem} alt="mat-problem" className="object-cover" />
+        <LazyImage src={MatProblem} alt="mat-problem" className="object-cover" />
       </div>
 
       <div className="w-full relative py-[50px] bg-footer">
@@ -175,7 +176,7 @@ const MatCare = () => {
       </div>
 
       <div className="w-full relative bg-white py-[50px]">
-        <img src={MatSolution} alt="mat-problem" className="object-cover" />
+        <LazyImage src={MatSolution} alt="mat-problem" className="object-cover" />
       </div>
 
       <div className="w-full relative bg-white">
@@ -209,7 +210,7 @@ const MatCare = () => {
             </div>
           </div>
           <div className="w-full flex justify-center items-center relative py-[50px]">
-            <img src={MatUserPersona} alt="mobo-map" className="object-cover" />
+            <LazyImage src={MatUserPersona} alt="mobo-map" className="object-cover" />
           </div>
         </div>
       </div>
@@ -233,7 +234,7 @@ const MatCare = () => {
 
       <div className="w-full relative bg-white">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[50px] max-w-[1500px]">
-          <img src={MatUserFlow} alt="mobo-map" className="object-cover" />
+          <LazyImage src={MatUserFlow} alt="mobo-map" className="object-cover" />
         </div>
       </div>
 
@@ -274,8 +275,8 @@ const MatCare = () => {
               </div>
             </div>
             <div className="w-full flex flex-col justify-center items-center md:w[50%]">
-              <img src={MatFont} alt="mat-font" />
-              <img src={MatColors} alt="mat-colors" />
+              <LazyImage src={MatFont} alt="mat-font" />
+              <LazyImage src={MatColors} alt="mat-colors" />
             </div>
           </div>
         </div>
@@ -310,7 +311,7 @@ const MatCare = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[50px] max-w-[1500px]">
-          <img src={MatOnboarding} alt="mobo-map" className="object-cover" />
+          <LazyImage src={MatOnboarding} alt="mobo-map" className="object-cover" />
         </div>
       </div>
 
@@ -332,7 +333,7 @@ const MatCare = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[50px] max-w-[1500px]">
-          <img src={MatAccount} alt="mobo-map" className="object-cover" />
+          <LazyImage src={MatAccount} alt="mobo-map" className="object-cover" />
         </div>
       </div>
 
@@ -350,7 +351,7 @@ const MatCare = () => {
             </Paragraph>
           </div>
           <div className="w-full my-8 relative md:w-[50%] flex justify-end items-center md:mx-3 md:my-auto">
-            <img src={MatHomeScreen} alt="Mobo-hero" className="object-cover" />
+            <LazyImage src={MatHomeScreen} alt="Mobo-hero" className="object-cover" />
           </div>
         </div>
       </div>
@@ -381,7 +382,7 @@ const MatCare = () => {
             alt="book appointment"
             className="object-cover"
           />
-          <img src={MatBookAppointmentTwo} alt="book appointment two" />
+          <LazyImage src={MatBookAppointmentTwo} alt="book appointment two" />
         </div>
       </div>
 
@@ -404,7 +405,7 @@ const MatCare = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[50px] max-w-[1500px]">
-          <img src={MatPayment} alt="mat-payment" className="object-cover" />
+          <LazyImage src={MatPayment} alt="mat-payment" className="object-cover" />
         </div>
       </div>
 
@@ -427,7 +428,7 @@ const MatCare = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[50px] max-w-[1500px]">
-          <img src={MatTracking} alt="mat-payment" className="object-cover" />
+          <LazyImage src={MatTracking} alt="mat-payment" className="object-cover" />
         </div>
       </div>
 
@@ -450,7 +451,7 @@ const MatCare = () => {
 
       <div className="w-full relative bg-offwhite">
         <div className="w-[90%] mx-auto flex justify-center items-center relative py-[50px] max-w-[1500px]">
-          <img src={MatCommunity} alt="mat-payment" className="object-cover" />
+          <LazyImage src={MatCommunity} alt="mat-payment" className="object-cover" />
         </div>
       </div>
 

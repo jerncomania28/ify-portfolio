@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Padlock from "../assets/padlock.svg";
+import Padlock from "../assets/padlock.png";
 
 interface CardProps {
   children: React.ReactNode;
@@ -22,11 +22,11 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className={`relative font-figtree`}>
-      <div className="w-full bg-card relative h-[350px] py-[50px]">
+      <div className="w-full bg-card relative h-[350px] py-[50px] flex justify-center items-center">
         <img
           src={projectImage}
           alt="card-img"
-          className="w-full h-full object-fit"
+          className="h-full justify-self-end"
         />
       </div>
       <div className="w-full relative flex flex-col px-2 py-3">

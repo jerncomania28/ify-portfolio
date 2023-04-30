@@ -1,20 +1,21 @@
+import { BsEnvelope } from "react-icons/bs";
+import { BiLinkExternal } from "react-icons/bi";
+
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Paragraph from "../components/Paragraph";
 import LazyImage from "../components/LazyImage";
 import Card from "../components/Card";
 
-import Envelope from "../assets/envelope.svg";
-import ViewCV from "../assets/view-cv.svg";
-import Mobiklinic from "../assets/mobiklinic.svg";
-import MatCare from "../assets/matcare.svg";
-import Craiglist from "../assets/craiglist.svg";
-import Profile from "../assets/profile.svg";
-import Coverly from "../assets/coverly.svg";
-import TvMovieApp from "../assets/tv_movie_app.svg";
-import LeadershipBoard from "../assets/leadership-board.svg";
-import OnboardingView from "../assets/onboarding-view.svg";
-import FinanceMgtApp from "../assets/finance-mgt-app.svg";
+import Mobiklinic from "../assets/mobiklinic.png";
+import MatCare from "../assets/matcare.png";
+import Craiglist from "../assets/craiglist.png";
+import Profile from "../assets/profile.png";
+import Coverly from "../assets/coverly.png";
+import TvMovieApp from "../assets/tv-movie-app.png";
+import LeadershipBoard from "../assets/leadership-board.png";
+import OnboardingView from "../assets/onboarding-view.png";
+import FinanceMgtApp from "../assets/finance-mgt-app.png";
 
 const Home = () => {
   return (
@@ -35,13 +36,13 @@ const Home = () => {
               the final product is a masterpiece that stands out from the crowd.
             </Paragraph>
             <div className="inline-flex my-4 self-center md:self-start md:my-8">
-              <Button icon={ViewCV} border className="border-white text-white ">
+              <Button icon={<BiLinkExternal size={20}/>} border className="border-white text-white hover:bg-white hover:text-black">
                 View My CV
               </Button>
               <Button
-                icon={Envelope}
+                icon={<BsEnvelope size={20}/>}
                 border
-                className="mx-3 border-white text-white "
+                className="mx-3 border-white text-white hover:bg-white hover:text-black"
               >
                 Contact Me
               </Button>
@@ -109,7 +110,7 @@ const Home = () => {
           <Header firstText="About." className="text-[80px] font-bold" />
           <div className="w-full flex flex-col justify-between mx-auto my-[50px] py-4 md:flex-row">
             <div className="w-full relative md:w-1/2">
-              <img src={Profile} alt="profile" />
+              <LazyImage src={Profile} alt="profile" />
               {/* <LazyImage src={Profile} alt="profile" /> */}
             </div>
             <div className="flex flex-col justify-center w-full relative my-4 md:my-auto md:w-1/2 md:ml-8">

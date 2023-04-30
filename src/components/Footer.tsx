@@ -1,9 +1,10 @@
+import { BsEnvelope } from "react-icons/bs";
+import { CiLinkedin } from "react-icons/ci";
+
 import Header from "./Header";
 import Paragraph from "./Paragraph";
 import Button from "./Button";
 
-import Envelope from "../assets/envelope.svg";
-import LinkedinLogo from "../assets/LinkedinLogo.svg";
 
 const Footer = () => {
   return (
@@ -20,14 +21,14 @@ const Footer = () => {
         </Paragraph>
         <div className="inline-flex self-center md:self-start">
           <Button
-            icon={Envelope}
+            icon={<BsEnvelope size={20}/>}
             border
             className="hover:bg-white hover:text-black border-white text-white py-3 w-[150px] font-figtree"
           >
             Email
           </Button>
           <Button
-            icon={LinkedinLogo}
+            icon={<CiLinkedin size={25}/>}
             border
             className="mx-3 hover:bg-white hover:text-black border-white text-white py-3 w-[150px] font-figtree"
           >
